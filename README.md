@@ -13,6 +13,12 @@ A cool template for signing LineageOS 20.0 > builds with `dev-keys`.
 $ ./gen_keys.py
 ```
 
+&emsp;&ensp;OR, run using uv:
+
+```bash
+$ uv run --with pyopenssl ./gen_keys.py
+```
+
 It will generate the certificates (defined in `gen_keys_py/keys.py`) in `vendor/lineage-priv/keys`, the actual keys used to generate the certificates in `~/.android-certs`, and regenerate the makefiles as new entries are added.
 
 Backup **AT ALL COSTS** your `~/.android-certs` and `vendor/lineage-priv/keys` folders **AND NEVER LEAK THOSE**. Losing these keys could prevent you from updating your LineageOS builds with the same keys, so formatting data would be required. Leakage of these keys can compromise the security and authenticity of your builds, requiring a new pair of keys to be generated.

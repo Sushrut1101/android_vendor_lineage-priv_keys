@@ -7,3 +7,6 @@
 ## TEST Cases ##
 .android-certs
 ## END TEST Cases ##
+
+# Python cache
+__pycache__/
